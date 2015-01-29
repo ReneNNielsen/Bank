@@ -21,12 +21,21 @@ public class Login
 
     public User addNewUser(String name, String password, int id)
     {
-        User newUser = new User();
-        newUser.setName(name);
-        newUser.setPassword(password);
-        newUser.setId(id);
-        _bank.addUser(newUser);
+        _user = new User();
+        _user.setName(name);
+        _user.setPassword(password);
+        _user.setId(id);
+        _bank.addUser(_user);
         return _user;
     }
 
+    public Bank getBank()
+    {
+        return _bank;
+    }
+
+    public User getUser()
+    {
+        return _user;
+    }
 }

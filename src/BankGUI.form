@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="BankGUI">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="534" height="481"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="94e10" binding="tabControl">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="c09d2" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Accounts"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="4406d" class="javax.swing.JComboBox" binding="cbSelectAccount">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="0.5"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="47ff4" class="javax.swing.JTable" binding="tblAccount">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="10.0"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+          <grid id="9baf7" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="AddAcount"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="a2b6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.5" weighty="0.5"/>
+                </constraints>
+                <properties>
+                  <text value="Select account type"/>
+                </properties>
+              </component>
+              <component id="925b4" class="javax.swing.JComboBox" binding="cbSelectAccountType">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="0.5"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="61300" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.5" weighty="0.5"/>
+                </constraints>
+                <properties>
+                  <text value="Name of the account"/>
+                </properties>
+              </component>
+              <component id="13944" class="javax.swing.JTextField" binding="txtNameOfAccount">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="1.0" weighty="0.5"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="72356" class="javax.swing.JButton" binding="btnAddAccount">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="10.0"/>
+                </constraints>
+                <properties>
+                  <text value="Add account"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c2464" layout-manager="GridBagLayout">
+            <constraints>
+              <tabbedpane title="Send Money"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="ba8f0" class="javax.swing.JTextField" binding="txtAmount">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="1.0" weighty="0.5"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="43656" class="javax.swing.JButton" binding="btnSendButton">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="1.0" weighty="10.0"/>
+                </constraints>
+                <properties>
+                  <text value="Send"/>
+                </properties>
+              </component>
+              <component id="80452" class="javax.swing.JTextField" binding="txtAccountTo">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="15dbf" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="0" left="0" bottom="0" right="5" weightx="0.5" weighty="0.5"/>
+                </constraints>
+                <properties>
+                  <text value="Account from"/>
+                </properties>
+              </component>
+              <component id="6563b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="0" left="0" bottom="0" right="5" weightx="0.5" weighty="0.5"/>
+                </constraints>
+                <properties>
+                  <text value="Account to"/>
+                </properties>
+              </component>
+              <component id="1498b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                  <gridbag top="0" left="0" bottom="0" right="5" weightx="0.5" weighty="0.5"/>
+                </constraints>
+                <properties>
+                  <text value="Amount"/>
+                </properties>
+              </component>
+              <component id="cee64" class="javax.swing.JComboBox" binding="cbAccountFrom">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                  <gridbag weightx="0.0" weighty="0.0"/>
+                </constraints>
+                <properties/>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -6,8 +7,8 @@ import java.util.List;
  */
 public class Bank {
     private String _name;
-    private List<Account> _accounts;
-    private List<User> _users;
+    private List<Account> _accounts = new ArrayList<Account>();
+    private List<User> _users = new ArrayList<User>();
 
     public void setName(String name)
     {

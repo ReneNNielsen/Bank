@@ -20,8 +20,12 @@ public class MainGUI {
     private JButton btnCreateUser;
     private JPanel TopPanel;
 
-    private List<Bank> banks = new ArrayList<Bank>();
-    Login login;
+    private static List<Bank> banks = new ArrayList<Bank>();
+
+    public static List<Bank> getBanks()
+    {
+        return banks;
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("MainGUI");
@@ -62,27 +66,32 @@ public class MainGUI {
             public void actionPerformed(ActionEvent e) {
                 if (txtId.getText() != "" && txtPassword.getText() != "" && txtUserName.getText() != "")
                 {
-                    setLogin();
+                    Login login = setLogin();
+
                     try
                     {
-                        login.addNewUser(txtUserName.getText(), txtPassword.getText(), Integer.parseInt(txtId.getText()));
+                        int id = Integer.parseInt(txtId.getText());
+                        login.addNewUser(txtUserName.getText(), txtPassword.getText(), id);
+                        BankGUI bg = new BankGUI(login);
+                        System.out.println("Opened");
                     }
                     catch (Exception ex)
                     {
-
+                        System.out.println(ex.getMessage());
                     }
                 }
             }
         }));
     }
 
-    private void setLogin()
+    private Login setLogin()
     {
         for (int i = 0; i < banks.size(); i++) {
             if (banks.get(i).getName().equals(cbSelectBank.getSelectedItem().toString()))
             {
-                login = new Login(banks.get(i));
+                return new Login(banks.get(i));
             }
         }
+        return null;
     }
 }
